@@ -1,0 +1,36 @@
+class Node:  
+2     def __init__(self,value=None,left=None,right=None):  
+3         self.value=value  
+4         self.left=left    #左子树
+5         self.right=right  #右子树
+
+
+def preTraverse(root):  
+    '''
+    前序遍历
+    '''
+    if root==None:  
+        return  
+    print(root.value)  
+    preTraverse(root.left)  
+    preTraverse(root.right)  
+
+def midTraverse(root): 
+    '''
+    中序遍历
+    '''
+    if root==None:  
+        return  
+    midTraverse(root.left)  
+    print(root.value)  
+    midTraverse(root.right)  
+  
+def afterTraverse(root):  
+    '''
+    后序遍历
+    '''
+    if root==None:  
+        return  
+    afterTraverse(root.left)  
+    afterTraverse(root.right)  
+    print(root.value)
